@@ -1,78 +1,250 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>My Resume</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Resume — Rakshita Govindappa Halagatti</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+
+  <style>
+    :root {
+  --bg: #f8f9fa;          /* light background */
+  --panel-bg: #ffffff;    /* white panel for clean look */
+  --accent: #2c3e50;      /* dark blue header/nav/sidebar */
+  --accent-light: #e67e22;/* orange highlight/accent */
+  --text-dark: #333333;   /* dark text */
+  --text-light: #ffffff;  /* white text on dark backgrounds */
+  --max-width: 1000px;
+}
+
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background: var(--bg);
+      color: var(--text-dark);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    header {
+      width: 100%;
+      max-width: var(--max-width);
+      background: var(--accent);
+      color: var(--text-light);
+      padding: 20px;
+      border-radius: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header .brand {
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+
+    nav a {
+      color: var(--text-light);
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: var(--accent-light);
+    }
+
+    main {
+      width: 100%;
+      max-width: var(--max-width);
+      margin-top: 30px;
+      background: var(--panel-bg);
+      border-radius: 12px;
+      display: flex;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+
+    @media (max-width: 768px) {
+      main {
+        flex-direction: column;
+      }
+    }
+
+    .sidebar {
+      width: 300px;
+      background: var(--accent);
+      color: var(--text-light);
+      padding: 30px;
+    }
+
+    @media (max-width: 768px) {
+      .sidebar {
+        width: 100%;
+      }
+    }
+
+    .sidebar .profile-pic {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: var(--accent-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      margin: 0 auto 20px auto;
+      color: var(--text-light);
+    }
+
+    .sidebar h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-bottom: 1px solid var(--accent-light);
+      padding-bottom: 8px;
+    }
+
+    .sidebar .contact, .sidebar .skills, .sidebar .certificates {
+      margin-bottom: 25px;
+    }
+
+    .skills span, .certificates li {
+      display: inline-block;
+      background: var(--panel-bg);
+      color: var(--accent);
+      padding: 6px 12px;
+      border-radius: 12px;
+      margin: 4px 4px 0 0;
+      font-size: 0.85rem;
+    }
+
+    .certificates ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .content {
+      flex: 1;
+      padding: 30px;
+    }
+
+    .content h1 {
+      color: var(--accent);
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .content section {
+      margin-bottom: 25px;
+    }
+
+    .content section h3 {
+      color: var(--accent);
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .content section ul {
+      list-style: disc;
+      margin-left: 20px;
+    }
+
+    .content section p {
+      line-height: 1.5;
+    }
+
+    footer {
+      margin: 40px 0 20px;
+      color: var(--text-dark);
+      font-size: 0.9rem;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
+
   <header>
-    <h1>My Resume</h1>
+    <div class="brand">Rakshita G Halagatti</div>
     <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="resume.html" class="active">Resume</a></li>
-        <li><a href="biodata.html">Bio Data</a></li>
-      </ul>
+      <a href="index.html">Home</a>
+      <a href="biodata.html">Bio-Data</a>
+      <a href="resume.html">Resume</a>
     </nav>
   </header>
 
   <main>
-    <section>
-      <h2>Career Objective</h2>
-      <p>Enthusiastic Computer Science and engineering student and have passion for software development. Proficient C programming and web development. Eager to apply problem solving skills in collabrotive environment</p>
-    </section>
-    <section>
-      <h2>Education</h2>
-      <ul>
-        <li>B.E in CSE,SKSVMACET, Lakshmeshwara (CGPA:8.6)</li>
-        <li>PUC PCMB,SVPU college(90%)</li>
-        <li>SSLC, KRCRS Hirehonihalli (95.32%)</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Skills</h2>
-      <ul>
-        <li>C Programming</li>
-        <li>Python (Basic)</li>
-        <li>Web Development (HTML, CSS, JS)</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Projects</h2>
-      <p><strong>VTU Result Extractor & Analyzer</strong> – A PHP-based mini project to extract and analyze results.</p>
-    <p><strong>Attendance Mangement</strong> – Student attendance management.</p>
-    </section>
-
-    <section>
-      <h2>Certificates</h2>
-      <ul>
-        <li>NPTEL – Soft Skills</li>
-        <li>Simplilearn – Basic Python</li>
-        <li>C Programming – IIT Bombay</li>
-
-      </ul>
-    </section>
-    <section>
+    <div class="sidebar">
+      <div class="profile-pic">RH</div>
       <h2>Contact</h2>
-      <ul>
-        <li>Phone number:9742876149</li>
-        <li>email id:rghalagatti@gmail.com</li>
-        <li>address:Basweshwar street near Hebsur</li>
-       <li>
-  <a href="https://www.linkedin.com/in/rakshita-halagatti-4a40262a3" target="_blank">
-    LinkedIn.com/in/rakshita
-  </a>
-</li>
+      <p>📞 97428-76149<br/>
+         📧 rghalagatti@gmail.com<br/>
+         📍 Basweshwar Street, Hebsur</p>
 
-      </ul>
-    </section>
+      <h2>Skills</h2>
+      <div class="skills">
+        <span>C Programming</span>
+        <span>Python (Basic)</span>
+        <span>Web Development</span>
+        <span>Problem Solving</span>
+      </div>
+
+      <h2>Certificates</h2>
+      <div class="certificates">
+        <ul>
+          <li>NPTEL – Soft Skills</li>
+          <li>Simplilearn – Basic Python</li>
+          <li>C Programming – IIT Bombay</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="content">
+      <h1>Career Objective</h1>
+      <section>
+        <p>Enthusiastic Computer Science and Engineering student with a passion for software development. Proficient in C programming and web development, eager to apply problem-solving skills in collaborative environments.</p>
+      </section>
+
+      <section>
+        <h3>Education</h3>
+        <ul>
+          <li><strong>B.E (CSE)</strong> — SKSVMACET, Lakshmeshwara (CGPA: 8.6)</li>
+          <li><strong>PUC (PCMB)</strong> — SVPU College (90%)</li>
+          <li><strong>SSLC</strong> — KRCRS Hirehonihalli (95.32%)</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Projects</h3>
+        <ul>
+          <li><strong>VTU Result Extractor & Analyzer</strong> — A PHP-based mini project for result analysis.</li>
+          <li><strong>Attendance Management System</strong> — A student attendance management tool.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Additional Info</h3>
+        <p><strong>LinkedIn:</strong> 
+          <a href="https://www.linkedin.com/in/rakshita-halagatti-4a40262a3" target="_blank">
+            linkedin.com/in/rakshita-halagatti
+          </a>
+        </p>
+      </section>
+    </div>
   </main>
 
-  <footer>
-    <p> 2025 Rakshita</p>
-  </footer>
+  <footer>© 2025 Rakshita G Halagatti — All Rights Reserved</footer>
 </body>
 </html>
